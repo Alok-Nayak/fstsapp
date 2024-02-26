@@ -1,4 +1,4 @@
-# FileSure Backend (TypeScript)
+# FS Backend (TypeScript)
 
 This repository contains the backend server code for the FileSure web app, implemented in TypeScript.
 
