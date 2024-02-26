@@ -1,0 +1,49 @@
+{
+  "name": "fs-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run build",
+    "start": "node ./dist/server.js",
+    "start:prod": "npm run start",
+    "start:dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "lint": "eslint src --ignore-path .eslintignore --ext .ts",
+    "lint:fix": "npx eslint src --fix",
+    "prettier": "prettier --ignore-path .gitignore --write \"./src/**/*.+(js|ts|json)\"",
+    "prettier:fix": "npx prettier --write src",
+    "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi"
+  },
+  "keywords": [],
+  "author": "Alok Nayak",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.2",
+    "express": "^4.18.2",
+    "http-status": "^1.7.3",
+    "mongoose": "^8.1.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.1",
+    "prettier": "^3.2.4",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
