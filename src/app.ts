@@ -16,7 +16,7 @@ app.use(cors());
 // Health Check Route For AWS
 app.get('/', (req: Request, res: Response) => {
   console.log('testing');
-  res.send('Hello World!');
+  res.send('Hello World!!!!');
 });
 
 // Application routes
